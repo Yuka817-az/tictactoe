@@ -15,6 +15,11 @@ export default function App() {
         setSquares(nextSquares);
     }
 
+    function resetGame(){
+        setSquares(Array(9).fill(null));
+        setXIsNext(true);
+    }
+
     const winnerResult = calcWinner(squares);
     const winner = winnerResult?.winner;
     const winningSquares = new Set(winnerResult?.line ?? []);
@@ -50,6 +55,8 @@ export default function App() {
             </div>
 
         </div>
+        <button onClick={resetGame}>Reset Game</button>
+
         </div>
 
        
@@ -89,4 +96,3 @@ function calcWinner(squares){
     }
     return null;
 }
-

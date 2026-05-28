@@ -22,9 +22,10 @@
     }
 
     .board{
-        margin:auto;
+        margin:50px auto;
         width:36%;
         min-width:300px;
+
         .board-row{
             display:flex;
 
